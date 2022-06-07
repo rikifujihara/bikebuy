@@ -12,12 +12,15 @@
   </head>
 
   <body>
-  <% if notice %>
-      <p class="notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-      <p class="alert"><%= alert %></p>
-  <% end %>
+  <div class='container my-2'>
+  <%= render 'shared/nav'%>
+    <% if notice %>
+        <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+        <p class="alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
+  </div>
   </body>
 </html>
