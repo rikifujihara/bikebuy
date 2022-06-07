@@ -66,6 +66,7 @@ class ListingsController < ApplicationController
 
     def set_form_vars
       @categories = Category.all
+      @conditions = Listing.conditions.keys
     end
 
     # Only allow a list of trusted parameters through.
