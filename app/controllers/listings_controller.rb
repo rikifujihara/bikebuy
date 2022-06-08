@@ -73,7 +73,7 @@ class ListingsController < ApplicationController
     end
 
     def authorize_user
-      if @listing.user_id != current_user
+      if @listing.user != current_user
         flash[:alert] = "You don't have the required permissions to do that"
         redirect_to listings_path
       end
