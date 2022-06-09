@@ -62,7 +62,11 @@ class ListingsController < ApplicationController
   end
 
   def place_order
-    
+    Order.create(
+      listing_id: @listing.id,
+      seller_id: @listing.user_id,
+      buyer_id: current_user.id
+    )
   end
 
   private
