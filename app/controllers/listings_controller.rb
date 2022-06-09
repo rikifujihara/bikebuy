@@ -68,6 +68,10 @@ class ListingsController < ApplicationController
       buyer_id: current_user.id
     )
 
+    @listing.update(
+      sold: true
+    )
+
     flash[:alert] = "Thanks for buying :)"
     redirect_to listings_path
   end
